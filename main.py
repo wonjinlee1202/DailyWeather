@@ -55,7 +55,7 @@ def send_weather_update():
         f"Wind Speed: {wind_speed} m/s\n"
     )
 
-    send_sms_via_email("phone-number", weather_info, "carrier", ("xxxxx@gmail.com", "google-app-password"))
+    send_sms_via_email("phone-number", weather_info, "carrier", ("email@gmail.com", "google-app-password"))
 
 def main():
     schedule.every().day.at("08:00").do(send_weather_update)
